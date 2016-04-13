@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Engine2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @engine2s.each do |engine2| %>
+      <tr>
+        <td><%= engine2.title %></td>
+        <td><%= link_to 'Show', engine2 %></td>
+        <td><%= link_to 'Edit', edit_engine2_path(engine2) %></td>
+        <td><%= link_to 'Destroy', engine2, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Engine2', new_engine2_path %>

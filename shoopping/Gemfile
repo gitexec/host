@@ -1,0 +1,4 @@
+#TUTORIAL: Add gem and include it on gemspec
+eval(File.read(File.dirname(__FILE__) + '/../common_host_dependencies.rb'))
+gem 'core', path: '../core'
+gemspec
